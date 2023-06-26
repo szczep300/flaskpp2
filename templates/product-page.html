@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Sortowanie tabeli po kliknięciu nagłówka kolumny
+            $('th').click(function() {
+                var table = $(this).parents('table').eq(0);
+                var rows = table.find('tr:gt(0)').toArray().sort(compareRows($(this).index()));
+                this.asc = !this.asc;
+                if (!this.asc) {
+                    rows = rows.reverse();
+                }
+                for (var i = 0; i < rows.length; i++) {
+                    table.append(rows[i]);
+                }
+            });
+
+            // Filtrowanie danych tabeli na podstawie wpisanego tekstu
+            $('#filter-input').keyup(function() {
+                var filter = $(this).val().toUpperCase();
+                $('#opinions-table tbody tr').each(function() {
+                    var row = $(this);
+                    var content = row.text().toUpperCase();
+                    if (content.indexOf(filter) > -1) {
+                        row.show();
+                    } else {
+                        row.hide();
+                    }
+                });
+            });
+        });
+
+        // Funkcja porównująca wiersze tabeli do sortowania
+        function compareRows(index) {
+            return function(a, b) {
+                var valA = getCellValue(a, index);
+                var valB = getCellValue(b, index);
+                return $.isNumeric(valA) && $.isNumeric(valB) ?
+                    valA - valB :
+                    valA.toString().localeCompare(valB);
+            };
+        }
+
+        // Funkcja pomocnicza do pobierania wartości komórki wiersza tabeli
+        function getCellValue(row, index) {
+            return $(row).children('td').eq(index).text();
+        }
+    </script>
+    <style>
+        th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Information</h1>
+
+    <table>
+        <tr>
+            <th>Opinion Count</th>
+            <th>Cons Count</th>
+            <th>Pros Count</th>
+            <th>Average Rating</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>{{ product.opinion_count }}</td>
+            <td>{{ product.cons_count }}</td>
+            <td>{{ product.pros_count }}</td>
+            <td>{{ product.avg_rating }}</td>
+            <td>{{ product.url }}</td>
+        </tr>
+    </table>
+
+    <h2>Opinions</h2>
+
+    <input type="text" id="filter-input" placeholder="Filter">
+
+    <table id="opinions-table">
+        <tr>
+            <th>Opinion ID</th>
+            <th>Author</th>
+            <th>Recommendation</th>
+            <th>Score</th>
+            <th>Confirmed</th>
+            <th>Opinion Date</th>
+            <th>Purchase Date</th>
+            <th>Up Votes</th>
+            <th>Down Votes</th>
+            <th>Content</th>
+            <th>Cons</th>
+            <th>Pros</th>
+        </tr>
+        {% for opinion in opinions %}
+        <tr>
+            <td>{{ opinion.opinion_id }}</td>
+            <td>{{ opinion.author }}</td>
+            <td>{{ opinion.recommendation }}</td>
+            <td>{{ opinion.score }}</td>
+            <td>{{ opinion.confirmed }}</td>
+            <td>{{ opinion.opinion_date }}</td>
+            <td>{{ opinion.purchase_date }}</td>
+            <td>{{ opinion.up_votes }}</td>
+            <td>{{ opinion.down_votes }}</td>
+            <td>{{ opinion.content }}</td>
+            <td>{{ opinion.cons }}</td>
+            <td>{{ opinion.pros }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div>
+        <a href="/download/csv/{{ product.product_id }}.csv">Download CSV</a>
+        <a href="/download/xlsx/{{ product.product_id }}.xlsx">Download XLSX</a>
+        <a href="/download/json/{{ product.product_id }}.json">Download JSON</a>
+    </div>
+    <div>
+        <a href="/charts/{{ product.product_id }}">Go to Charts</a>
+    </div>
+</body>
+</html>

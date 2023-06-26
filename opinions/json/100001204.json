@@ -1,0 +1,41 @@
+[
+    {
+        "opinion_id": "17346034",
+        "author": "r...r",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-03-31 12:00:17",
+        "purchase_date": "2023-03-30 13:00:41",
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Jest ok.",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "głośność pracy",
+            "ładowność",
+            "zużycie energii"
+        ]
+    },
+    {
+        "opinion_id": "14313754",
+        "author": "Użytkownik Ceneo",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": null,
+        "opinion_date": "2021-04-19 01:59:20",
+        "purchase_date": null,
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Bez dwóch zdań najbardziej pojemna pralka w tym przedziale cenowym. Sprawdza się w dużej rodzinie a do tego ma bogate menu szybkich programów do wykorzystania. Polecam.",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "funkcjonalność",
+            "ładowność",
+            "stabilność pracy",
+            "zużycie energii"
+        ]
+    }
+]

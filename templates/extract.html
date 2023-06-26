@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strona Ekstrakcji</title>
+    <script>
+        function redirectToProductPage() {
+            var productId = document.getElementById("product-id").value;
+            var url = "/product/" + productId;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Strona Ekstrakcji</h1>
+    error: {{ error }}
+    <form>
+        <label for="product-id">ID produktu:</label>
+        <input type="text" id="product-id" required>
+        <button type="button" onclick="redirectToProductPage()">Uruchom ekstrakcję</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,166 @@
+[
+    {
+        "opinion_id": "17547142",
+        "author": "p...k",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-05-25 11:51:29",
+        "purchase_date": "2023-05-18 23:22:36",
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Prosta i funkcjonalna pralka, i o to chodzi w tym wszystkim :)",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "głośność pracy",
+            "ładowność",
+            "zużycie energii"
+        ]
+    },
+    {
+        "opinion_id": "17410630",
+        "author": "k...a",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-04-17 13:32:12",
+        "purchase_date": "2023-04-07 20:56:42",
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Pralka cicho pierze i wiruje, łatwa w obsłudze.",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "funkcjonalność",
+            "głośność pracy",
+            "ładowność",
+            "stabilność pracy",
+            "zużycie energii"
+        ]
+    },
+    {
+        "opinion_id": "17425459",
+        "author": "e...a",
+        "recommendation": null,
+        "score": "3,5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-04-20 13:25:13",
+        "purchase_date": "2023-04-13 14:23:05",
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Wykonanie świetne",
+        "cons": [],
+        "pros": []
+    },
+    {
+        "opinion_id": "17208790",
+        "author": "m...z",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-03-01 13:52:15",
+        "purchase_date": "2023-02-22 12:27:10",
+        "up_votes": "0",
+        "down_votes": "1",
+        "content": "Za tę cenę naprawdę fajna pralka.Polecam",
+        "cons": [
+            "efektywność",
+            "głośność pracy",
+            "ładowność",
+            "zużycie energii"
+        ],
+        "pros": []
+    },
+    {
+        "opinion_id": "17314185",
+        "author": "d...a",
+        "recommendation": "Polecam",
+        "score": "4,5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-03-24 11:19:17",
+        "purchase_date": "2023-03-02 15:10:10",
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Bardzo cicha",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "głośność pracy",
+            "ładowność",
+            "zużycie energii"
+        ]
+    },
+    {
+        "opinion_id": "17571832",
+        "author": "p...6",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": "Transakcja pochodzi z Marketplace Ceneo (usługi Kup Teraz).",
+        "opinion_date": "2023-06-01 18:08:46",
+        "purchase_date": "2023-05-25 19:12:32",
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Wyśmienity,",
+        "cons": [],
+        "pros": []
+    },
+    {
+        "opinion_id": "16814152",
+        "author": "M...a",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": null,
+        "opinion_date": "2022-11-30 21:07:48",
+        "purchase_date": null,
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "#oceniamna+ bardzo polecam wszystkim niezdecydowany osobą ten model pralki. Ja zakupiłam bo potrzebowałam pralki o głębokości do 52 cm i tak okazała się idealna a dodatkowo ma fajne programy prania i jest oczywiście energooszczędna.",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "funkcjonalność",
+            "głośność pracy",
+            "ładowność",
+            "stabilność pracy",
+            "zużycie energii"
+        ]
+    },
+    {
+        "opinion_id": "16814077",
+        "author": "Malgorzata",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": null,
+        "opinion_date": "2022-11-30 21:01:14",
+        "purchase_date": null,
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "#oceniamna+ bardzo dobra pralka w przyzwoitym przedziale cenowym, ma dobrze dobrane funkcje oraz fajnie otwierany dozownik chemii. Potrzebowałam pralki o głębokości do 52 cm i ta jest idealna.",
+        "cons": [],
+        "pros": [
+            "efektywność",
+            "głośność pracy",
+            "ładowność",
+            "zużycie energii"
+        ]
+    },
+    {
+        "opinion_id": "16717368",
+        "author": "Bartosz",
+        "recommendation": "Polecam",
+        "score": "5/5",
+        "confirmed": null,
+        "opinion_date": "2022-11-06 16:47:14",
+        "purchase_date": null,
+        "up_votes": "0",
+        "down_votes": "0",
+        "content": "Dobra pralka, pierze, ma wiele funkcji",
+        "cons": [],
+        "pros": [
+            "funkcjonalność",
+            "głośność pracy",
+            "stabilność pracy"
+        ]
+    }
+]

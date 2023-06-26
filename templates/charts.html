@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Charts Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Charts</h1>
+
+    <div>
+        <canvas id="recommendation-chart" width="400" height="400"></canvas>
+    </div>
+
+    <div>
+        <canvas id="rating-chart" width="400" height="400"></canvas>
+    </div>
+
+    <div>
+        <a href="/product/{{ product.product_id }}">Back to Product</a>
+    </div>
+
+    <script>
+        // Dane wykresu rekomendacji
+        var recommendationData = {
+            'Polecam': {{ chart_data.recommend }},
+            'Nie polecam': {{ chart_data.not_recommend }}
+        };
+
+        // Dane wykresu ocen
+        var ratingData = [
+            {{ chart_data.stars[0] }},
+            {{ chart_data.stars[1] }},
+            {{ chart_data.stars[2] }},
+            {{ chart_data.stars[3] }},
+            {{ chart_data.stars[4] }}
+    ];
+
+        // Inicjalizacja wykresu kołowego dla rekomendacji
+        var recommendationChartCtx = document.getElementById('recommendation-chart').getContext('2d');
+        var recommendationChart = new Chart(recommendationChartCtx, {
+            type: 'pie',
+            data: {
+                labels: Object.keys(recommendationData),
+                datasets: [{
+                    data: Object.values(recommendationData),
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Recommendation Distribution'
+                }
+            }
+        });
+
+        // Inicjalizacja wykresu słupkowego dla ocen
+        var ratingChartCtx = document.getElementById('rating-chart').getContext('2d');
+        var ratingChart = new Chart(ratingChartCtx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(ratingData),
+                datasets: [{
+                    data: Object.values(ratingData),
+                    backgroundColor: 'rgba(75, 192, 192, 0.7)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Rating Distribution'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>

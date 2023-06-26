@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Produktów</title>
+</head>
+<body>
+    <h1>Lista Produktów</h1>
+
+    <table>
+        <tr>
+            <th>Nazwa Produktu</th>
+            <th>Liczba Opinii</th>
+            <th>Liczba Wad</th>
+            <th>Liczba Zalet</th>
+            <th>Średnia Ocena</th>
+            <th>Pobierz Opinie</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td><a href="{{ product.url }}">{{ product.url }}</a></td>
+            <td>{{ product.opinion_count }}</td>
+            <td>{{ product.cons_count }}</td>
+            <td>{{ product.pros_count }}</td>
+            <td>{{ product.avg_rating }}</td>
+            <td>
+                <a href="download/csv/{{ product.product_id }}.csv">CSV</a>
+                <a href="download/xlsx/{{ product.product_id }}.xlsx">XLSX</a>
+                <a href="download/json/{{ product.product_id }}.json">JSON</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
